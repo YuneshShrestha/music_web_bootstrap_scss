@@ -1,16 +1,23 @@
 @mixin mybtn {
     padding: 0.8rem 3.2rem;
     background-color: $btn-color;
-    color: $text-color;
+    color: $btn-text-color;
     line-height: 3rem;
     font-size: 1.6rem;
     text-transform: capitalize;
     box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
     border-radius: 4.5rem;
+    font-weight: 600;
 }
 @mixin mybtnhover {
-    background-color: $text-color;
+    background-color: $btn-text-color;
     color: $btn-color;
     box-shadow: 0px 11.5px 20px rgba(196, 181, 181, 0.747);
     transform: translateY(-7px);
+}
+@mixin centerize_content($property_value) {
+    display: flex;
+    justify-content: center;
+    align-items: $property_value;
+    flex-direction: column;
 }

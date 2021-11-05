@@ -19,7 +19,7 @@ a, a:hover {
 }
 
 .navbar {
-  background-color: #0F044C;
+  background-color: #9D5C0D;
   width: 100vw;
   line-height: 8rem;
 }
@@ -37,7 +37,7 @@ a, a:hover {
 }
 
 .navbar .container .navbar-brand:hover {
-  color: #ac1212;
+  color: #F7D08A;
   -webkit-filter: drop-shadow(0 1.5rem 1rem rgba(255, 255, 255, 0.5));
           filter: drop-shadow(0 1.5rem 1rem rgba(255, 255, 255, 0.5));
 }
@@ -56,19 +56,20 @@ a, a:hover {
 
 .navbar .nav-item-list .button {
   padding: 0.8rem 3.2rem;
-  background-color: #ac1212;
-  color: #EEEEEE;
+  background-color: #F7D08A;
+  color: #777373;
   line-height: 3rem;
   font-size: 1.6rem;
   text-transform: capitalize;
   -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   border-radius: 4.5rem;
+  font-weight: 600;
 }
 
 .navbar .nav-item-list .button:hover {
-  background-color: #EEEEEE;
-  color: #ac1212;
+  background-color: #777373;
+  color: #F7D08A;
   -webkit-box-shadow: 0px 11.5px 20px rgba(196, 181, 181, 0.747);
           box-shadow: 0px 11.5px 20px rgba(196, 181, 181, 0.747);
   -webkit-transform: translateY(-7px);
@@ -94,6 +95,146 @@ a, a:hover {
   to {
     -webkit-transform: rotate(-2deg);
             transform: rotate(-2deg);
+  }
+}
+
+.hero {
+  background-color: #E5890A;
+  padding: 2rem 0;
+}
+
+.hero .hero_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-transform: capitalize;
+}
+
+.hero .hero_text_heading {
+  font-weight: 700;
+  font-size: 4rem;
+  color: #EEEEEE;
+  margin-bottom: 4rem;
+}
+
+.hero .hero_text_para {
+  color: #EEEEEE;
+  margin-bottom: 4rem;
+  line-height: 2rem;
+}
+
+.hero .hero_text .hero_span {
+  color: #F7D08A;
+}
+
+.hero .hero_text a {
+  padding: 0.8rem 3.2rem;
+  background-color: #F7D08A;
+  color: #777373;
+  line-height: 3rem;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4.5rem;
+  font-weight: 600;
+}
+
+.hero .hero_text .hero_button1 {
+  margin-right: 1rem;
+}
+
+.hero .hero_text .hero_button2 {
+  background-color: grey;
+  color: #dbd3d3;
+}
+
+.hero .hero_figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero .hero_figure img {
+  -webkit-filter: drop-shadow(0 1.5rem 1rem rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0 1.5rem 1rem rgba(0, 0, 0, 0.5));
+  -webkit-animation: image_hero 1s linear infinite alternate;
+          animation: image_hero 1s linear infinite alternate;
+}
+
+@-webkit-keyframes image_hero {
+  0% {
+    -webkit-transform: scale(0.97);
+            transform: scale(0.97);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes image_hero {
+  0% {
+    -webkit-transform: scale(0.97);
+            transform: scale(0.97);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  html {
+    font-size: 55%;
+  }
+  .navbar {
+    line-height: 4rem;
+  }
+  .nav-item-list {
+    text-align: center;
+  }
+  .navbar .nav-item-list .navbar-nav .nav-item {
+    padding-right: 0%;
+  }
+  .navbar .nav-item-list .navbar-nav li:last-child {
+    padding-right: 0%;
+  }
+  .btn_content .hero_button1, .btn_content .hero_button2 {
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 30%;
   }
 }
 /*# sourceMappingURL=main.css.map */

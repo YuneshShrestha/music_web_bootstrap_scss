@@ -17,6 +17,7 @@ body{
 a, a:hover{
     text-decoration: none;
 }
+// nav start
 .navbar{
     background-color: $primary-color;
     width: 100vw;
@@ -57,5 +58,98 @@ a, a:hover{
         to{
             transform: rotate(-2deg);
         }
+    }
+}
+// nav end
+// hero start
+.hero{
+    background-color: $secondary-color;
+    padding: 2rem 0;
+    #{&}_text{
+        @include centerize_content(flex-start);
+        text-transform: capitalize;
+        &_heading{
+            font-weight: 700;
+            font-size: 4rem;
+            color: $text-color;
+            margin-bottom: 4rem;
+        }
+        &_para{
+            color: $text-color;
+            margin-bottom: 4rem;
+            line-height: 2rem;
+        }
+        & .hero_span{
+            color: $btn-color;
+        }
+        & a{
+            @include mybtn;
+        }
+        & .hero_button1{
+            margin-right: 1rem;
+        }
+        & .hero_button2{
+            background-color: grey;
+            color: rgb(219, 211, 211);
+        }
+
+    }
+    #{&}_figure{
+        @include centerize_content(flex-end);
+        & img{
+            filter: drop-shadow(0 1.5rem 1rem rgba(0, 0, 0, 0.5));
+            animation: image_hero 1s linear infinite alternate;
+        }
+    
+       
+    }
+    @keyframes image_hero {
+        0%{
+            transform: scale(0.97);
+        }
+        100%{
+           transform: scale(1);
+        }
+    }
+}
+// hero end
+
+// media
+@media only screen and (max-width: 960px) {
+    html{
+        font-size: 55%;
+    }
+    .navbar{
+        line-height: 4rem;
+        
+    }
+    .nav-item-list{
+        text-align: center;
+    } 
+    .navbar .nav-item-list .navbar-nav .nav-item {
+        padding-right: 0%;
+    }
+    .navbar .nav-item-list .navbar-nav li:last-child {
+        padding-right: 0%;
+    }
+
+    .btn_content{
+       
+        .hero_button1,.hero_button2{
+            display: block;
+            margin: 0 auto 1rem auto;
+            
+        }
+    }
+}
+@media only screen and (max-width: 720px) {
+    html{
+        font-size: 45%;
+    }
+    
+}
+@media only screen and (max-width: 480px) {
+    html{
+        font-size: 30%;
     }
 }
