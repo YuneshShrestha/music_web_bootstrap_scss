@@ -1,18 +1,61 @@
-// calling custom file
-@import 'custom';
+@import 'variables';
+@import 'mixin';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-// calling components folder
-@import 'components/mixins';
-@import 'components/typography';
-@import 'components/animations';
-@import 'components/buttons';
+html{
+    font-size: 62.5%;
+}
 
-// calling sections(page parts) folder
-@import 'sections/navbar';
-@import 'sections/intro';
-@import 'sections/companies';
-@import 'sections/services';
-@import 'sections/testimonials';
-@import 'sections/faq';
-@import 'sections/get-started';
-@import 'sections/footer';
+body{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+}
+a, a:hover{
+    text-decoration: none;
+}
+.navbar{
+    background-color: $primary-color;
+    width: 100vw;
+    line-height: 8rem;
+    &-brand{
+        font-size: 1.5rem;
+        animation: music 1.4s linear infinite;
+        animation-direction: alternate;
+        & .fas{
+            font-size: 3rem;
+        }
+        
+    }
+    & .container .navbar-brand:hover{
+        color: $btn-color;
+        filter: drop-shadow(0 1.5rem 1rem rgba(255, 255, 255, 0.5));
+    }
+    & .nav-item-list{
+        margin-left: 3rem;
+        & .navbar-nav .nav-item{
+            padding-right: 3rem;
+        } 
+        & .navbar-nav li:last-child{
+            padding-right: 0;
+        }
+        & .button{
+            @include mybtn;
+            &:hover{
+                @include mybtnhover;
+            }
+        }
+        
+    }
+    @keyframes music {
+        from{
+            transform: rotate(2deg);
+        }
+        to{
+            transform: rotate(-2deg);
+        }
+    }
+}
